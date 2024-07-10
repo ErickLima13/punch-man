@@ -26,6 +26,11 @@ public class PlayerPhysics : MonoBehaviour
         myAnimator.SetFloat("Blend", myInput.magnitude);
     }
 
+    public void Punch()
+    {
+        myAnimator.Play("Hook Punch");
+    }
+
     public void Move(InputAction.CallbackContext value)
     {
         myInput = value.ReadValue<Vector2>();
